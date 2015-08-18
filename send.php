@@ -4,7 +4,9 @@
  * require client
  */
 
-require(__DIR__ . "/lib/Segment.php");
+use Segment\Segment;
+
+require(__DIR__ . "/vendor/autoload.php");
 
 /**
  * Args
@@ -37,7 +39,7 @@ if(!file_exists($old)) {
 }
 
 if (!rename($old, $file)) {
-  print("error renaming from $old to $new\n");
+  print("error renaming from $old to $file\n");
   exit(1);
 }
 
@@ -51,7 +53,6 @@ $lines = explode("\n", $contents);
 /**
  * Initialize the client.
  */
-
 Segment::init($args["secret"], array(
   "debug" => true,
   "error_handler" => function($code, $msg){
@@ -73,7 +74,7 @@ foreach ($lines as $line) {
   $ts = floatval($dt->getTimestamp() . "." . $dt->format("u"));
   $payload["timestamp"] = $ts;
   $type = $payload["type"];
-  $ret = call_user_func_array(array("Segment", $type), array($payload));
+  $ret = call_user_func_array(array('Segment\Segment', $type), array($payload));
   if ($ret) $successful++;
   $total++;
   if ($total % 100 === 0) Segment::flush();
@@ -89,10 +90,14 @@ unlink($file);
 print("sent $successful from $total requests successfully");
 exit(0);
 
+
 /**
  * Parse arguments
+ *
+ * @param mixed $argv
+ *
+ * @return array
  */
-
 function parse($argv){
   $ret = array();
 
