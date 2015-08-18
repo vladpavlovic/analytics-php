@@ -1,6 +1,9 @@
 <?php
 
-require_once(dirname(__FILE__) . "/../lib/Segment.php");
+namespace Segment\Tests;
+
+use Segment\Segment;
+use PHPUnit_Framework_TestCase;
 
 class AnalyticsTest extends PHPUnit_Framework_TestCase {
 
@@ -143,4 +146,3 @@ class AnalyticsTest extends PHPUnit_Framework_TestCase {
     )));
   }
 }
-?>
