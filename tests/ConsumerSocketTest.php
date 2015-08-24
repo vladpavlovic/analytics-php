@@ -2,7 +2,7 @@
 
 namespace Analytics\Segment\Tests;
 
-use Analytics\Segment\Client;
+use Analytics\Segmentio\Client;
 use PHPUnit_Framework_TestCase;
 use \Exception;
 

@@ -1,8 +1,8 @@
 <?php
 
-namespace Analytics\Segment\Tests;
+namespace Analytics\Segmentio\Tests;
 
-use Analytics\Segment\Client;
+use Analytics\Segmentio\Client;
 use PHPUnit_Framework_TestCase;
 
 class ConsumerFileTest extends PHPUnit_Framework_TestCase

@@ -1,6 +1,6 @@
 <?php
 
-namespace Analytics\Segment\Consumer;
+namespace Analytics\Segmentio\Consumer;
 
 use Exception;
 

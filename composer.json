@@ -23,8 +23,8 @@
   },
   "autoload": {
     "psr-4": {
-      "Analytics\\Segment\\": "src/",
-      "Analytics\\Segment\\Test\\": "tests/"
+      "Analytics\\Segmentio\\": "src/",
+      "Analytics\\Segmentio\\Test\\": "tests/"
     }
   }
 }

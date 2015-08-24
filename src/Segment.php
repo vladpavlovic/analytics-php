@@ -1,6 +1,6 @@
 <?php
 
-namespace Analytics\Segment;
+namespace Analytics\Segmentio;
 
 use \Exception;
 
@@ -9,9 +9,9 @@ if (!function_exists('json_encode')) {
 }
 
 /**
- * Class Tracker
+ * Class Segment
  */
-class Tracker
+class Segment
 {
 
     /**
