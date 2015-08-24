@@ -1,10 +1,16 @@
 <?php
 
-namespace Segment\Consumer;
+namespace Analytics\Segment\Consumer;
 
+/**
+ * Class ForkCurl
+ */
 class ForkCurl extends QueueConsumer
 {
 
+    /**
+     * @var string
+     */
     protected $type = "ForkCurl";
 
 

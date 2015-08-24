@@ -1,8 +1,8 @@
 <?php
 
-namespace Segment\Tests;
+namespace Analytics\Segment\Tests;
 
-use Segment\Client;
+use Analytics\Segment\Client;
 use PHPUnit_Framework_TestCase;
 use \Exception;
 

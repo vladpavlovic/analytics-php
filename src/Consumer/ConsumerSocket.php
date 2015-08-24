@@ -1,12 +1,11 @@
 <?php
 
-namespace Segment\Consumer;
+namespace Analytics\Segment\Consumer;
 
 use Exception;
 
 /**
  * Class ConsumerSocket
- * @package Segment\Consumer
  */
 class ConsumerSocket extends QueueConsumer
 {

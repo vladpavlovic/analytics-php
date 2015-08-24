@@ -4,7 +4,7 @@
  * require client
  */
 
-use Segment\Segment;
+use Analytics\Segment\Tracker;
 
 require(__DIR__ . "/vendor/autoload.php");
 
@@ -53,7 +53,7 @@ $lines = explode("\n", $contents);
 /**
  * Initialize the client.
  */
-Segment::init($args["secret"], array(
+Tracker::init($args["secret"], array(
   "debug" => true,
   "error_handler" => function($code, $msg){
     print("$code: $msg\n");
@@ -74,13 +74,13 @@ foreach ($lines as $line) {
   $ts = floatval($dt->getTimestamp() . "." . $dt->format("u"));
   $payload["timestamp"] = $ts;
   $type = $payload["type"];
-  $ret = call_user_func_array(array('Segment\Segment', $type), array($payload));
+  $ret = call_user_func_array(array('Analytics\Segment\Tracker', $type), array($payload));
   if ($ret) $successful++;
   $total++;
-  if ($total % 100 === 0) Segment::flush();
+  if ($total % 100 === 0) Tracker::flush();
 }
 
-Segment::flush();
+Tracker::flush();
 unlink($file);
 
 /**

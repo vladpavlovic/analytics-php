@@ -1,6 +1,6 @@
 <?php
 
-namespace Segment\Consumer;
+namespace Analytics\Segment\Consumer;
 
 /**
  * Class AbstractConsumer

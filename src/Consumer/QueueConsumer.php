@@ -1,10 +1,9 @@
 <?php
 
-namespace Segment\Consumer;
+namespace Analytics\Segment\Consumer;
 
 /**
  * Class QueueConsumer
- * @package Segment\Consumer
  */
 abstract class QueueConsumer extends AbstractConsumer implements ConsumerInterface
 {

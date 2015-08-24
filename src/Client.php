@@ -1,12 +1,11 @@
 <?php
 
-namespace Segment;
+namespace Analytics\Segment;
 
-use Segment\Consumer\ConsumerInterface;
+use Analytics\Segment\Consumer\ConsumerInterface;
 
 /**
  * Class Client
- * @package Segment
  */
 class Client
 {
@@ -36,9 +35,9 @@ class Client
     {
 
         $consumers = array(
-            "file"      => 'Segment\Consumer\ConsumerFile',
-            "fork_curl" => 'Segment\Consumer\ForkCurl',
-            "socket"    => 'Segment\Consumer\ConsumerSocket',
+            "file"      => 'Analytics\Segment\Consumer\ConsumerFile',
+            "fork_curl" => 'Analytics\Segment\Consumer\ForkCurl',
+            "socket"    => 'Analytics\Segment\Consumer\ConsumerSocket',
         );
 
         # Use our socket consumer by default
